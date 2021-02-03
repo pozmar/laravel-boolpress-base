@@ -7,10 +7,11 @@ use App\Model;
 use Faker\Generator as Faker;
 
 $factory->define(App\Posts::class, function (Faker $faker) {
+    
     return [
-        'id'=>$faker->randomNumber,
-        'post_id'=>$faker->randomNumber,
-        'title'=>$faker->words(),
+        
+        'category_id'=>$faker->numberBetween(1, 10),
+        'title'=>$faker->text,
         'author'=>$faker->name
     ];
 });

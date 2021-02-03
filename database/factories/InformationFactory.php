@@ -10,8 +10,8 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Information::class, function (Faker $faker) {
     return [
-        'id'=>$faker->randomNumber,
-        'post_id'=>$faker->randomNumber,
+        
+        'post_id'=>$faker->numberBetween(1, 100),
         'description'=>$faker->text,
         'slug'=>$faker->slug
     ];

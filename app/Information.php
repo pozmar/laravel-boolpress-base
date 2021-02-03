@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Information extends Model
 {
-    protected $table = 'information';
+    protected $table = 'posts_information';
+    public function post(){
+        return $this->belongsTo('App\Posts');
+    }
 }
