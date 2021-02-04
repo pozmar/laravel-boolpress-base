@@ -15,4 +15,7 @@ class Posts extends Model
     public function postCategory(){
         return $this->belongsTo('App\Categories', 'category_id');
     }
+    public function tags(){
+        return $this->belongsToMany('App\Tag', 'post_tag', 'post_id', 'tag_id');
+    }
 }

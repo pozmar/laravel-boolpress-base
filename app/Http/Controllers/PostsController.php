@@ -23,7 +23,8 @@ class PostsController extends Controller
             'id' => '#',
             'category_id' => 'Categoria',
             'title'=> 'Titolo',
-            'author'=>'Autore'
+            'author'=>'Autore',
+            'tags' => 'Tag'
         ];
 
         return view('posts.index', compact(['posts', 'columns']));
