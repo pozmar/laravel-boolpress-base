@@ -63,7 +63,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Posts::find($id);
+       return view('posts.show', compact('post'));
     }
 
     /**
@@ -74,7 +75,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**

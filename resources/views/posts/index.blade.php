@@ -16,7 +16,7 @@
       <td>{{ $post->category_id }}</td>
       <td>{{ $post->title }}</td>
       <td>{{ $post->author }}</td>
-      
+      <td><a href="{{ route('posts.show', $post->id) }}">Vai</a></td>
       
     </tr>
     @endforeach
