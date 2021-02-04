@@ -17,10 +17,20 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $post = Posts::find(1);
+        $posts = Posts::all();
+
+        $columns =[
+            'id' => '#',
+            'category_id' => 'Categoria',
+            'title'=> 'Titolo',
+            'author'=>'Autore'
+        ];
+
+        return view('posts.index', compact(['posts', 'columns']));
+        /*$post = Posts::find(1);
         $info = $post->postInformation;
         $category = $post->postCategory;
-        dd($post, $info, $category);
+        dd($post, $info, $category);*/
         
     }
 
